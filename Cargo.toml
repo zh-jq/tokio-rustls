@@ -14,7 +14,7 @@ exclude = ["/.github", "/examples", "/scripts"]
 
 [dependencies]
 tokio = "1.0"
-rustls = { version = "0.22", default-features = false }
+rustls = { version = "0.23.0-alpha.0", default-features = false }
 pki-types = { package = "rustls-pki-types", version = "1" }
 
 [features]
@@ -31,3 +31,6 @@ futures-util = "0.3.1"
 lazy_static = "1.1"
 webpki-roots = "0.26"
 rustls-pemfile = "2"
+
+[patch.crates-io]
+rustls = { version = "0.23.0-alpha.0", git = "https://github.com/rustls/rustls.git" }
